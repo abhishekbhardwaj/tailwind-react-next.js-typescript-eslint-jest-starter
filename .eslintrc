@@ -1,0 +1,88 @@
+{
+    "extends": [
+        "react-app",
+        "plugin:react/recommended",
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+        "prettier/react",
+        "prettier/@typescript-eslint"
+    ],
+    "plugins": [
+        "prettier",
+        "@typescript-eslint",
+        "react"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+        "import/prefer-default-export": "off",
+        "react/prop-types": "off",
+        "import/no-cycle": "off",
+        "no-multi-assign": "off",
+        "import/imports-first": [
+            "error",
+            "absolute-first"
+        ],
+        "react/jsx-indent": [
+            2,
+            4,
+            {
+                "checkAttributes": false
+            }
+        ],
+        "react/jsx-indent-props": [
+            2,
+            4
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "semi": [
+            "error",
+            "never"
+        ]
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".js",
+                ".jsx",
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "babel-module": {},
+            "typescript": {}
+        },
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        // Allows for the parsing of modern ECMAScript features
+        "ecmaVersion": 2018,
+        // Allows for the use of imports
+        "sourceType": "module"
+    }
+}

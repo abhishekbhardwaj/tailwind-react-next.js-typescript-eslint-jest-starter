@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports['Index Page renders correctly 1'] = `
+<h1
+  className="text-xl text-gray-900"
+>
+  Hello
+</h1>
+`
