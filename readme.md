@@ -37,3 +37,7 @@ If you feel like changing the directory structure, please change the appropriate
 - `postcss.config.js`
 - `tsconfig.json`
 - The `lint` and the `format` scripts in `package.json`
+
+## Note
+
+1. If you wish to use Enzyme instead of React Testing Library, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
