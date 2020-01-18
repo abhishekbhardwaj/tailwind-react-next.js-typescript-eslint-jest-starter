@@ -11,7 +11,7 @@ describe('Index Page', () => {
 
   it('renders hello', () => {
     // Given
-    const EXPECTED = 'Hello from Starter Project.'
+    const EXPECTED = `Hello from ${process.env.SITE_NAME}.`
 
     const { getByTestId } = render(<Index />)
 
