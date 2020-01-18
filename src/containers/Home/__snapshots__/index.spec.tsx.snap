@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports['Index Page renders correctly 1'] = `
-<h1
-  className="text-xl text-gray-900"
->
-  Hello
-</h1>
-`
+exports[`Index Page renders correctly 1`] = `
+<DocumentFragment>
+  <h1
+    class="text-xl text-gray-900"
+    data-testid="helloH1"
+  >
+    Hello from 
+    <u>
+      Starter Project
+    </u>
+    .
+  </h1>
+</DocumentFragment>
+`;

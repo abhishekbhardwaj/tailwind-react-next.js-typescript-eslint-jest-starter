@@ -7,6 +7,7 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 1. Clone or download the project.
 2. `cd` in the project directory.
 3. If you cloned the project, make sure you remove the remote reference to this project by running `git remote rm origin`.
+4. Copy `.env.example` to `.env` as that file is used to load up all your environment variables.
 4. Run `yarn install` or `npm install` to install all dependencies.
 
 ## Commands
@@ -24,6 +25,8 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 3. `src/components` are all stateless reusable components.
 4. `src/containers` are more of stateful components for more main level components, like a whole page or screen for example.
 5. `src/css` folder is there just to house the Tailwind initialization.
+6. All env variables are available in `.env` files (`.env` file isn't committed). Whenever you update `.env`, please update `.env.example` and `.env.test` and `next.config.js` to proxy all environment variables properly.
+    You can access these variables in the app source code anywhere using `process.env.<VAR_NAME>`.
 
 My personal preference is to have the bare minimum code in `pages/` and house everything in the `src/` directory. Helps keep everything in one place, neat and tidy. You can change this in any way you prefer.
 
