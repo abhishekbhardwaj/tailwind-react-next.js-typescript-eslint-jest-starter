@@ -40,4 +40,10 @@ If you feel like changing the directory structure, please change the appropriate
 
 ## Note
 
-1. If you wish to use Enzyme instead of React Testing Library, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
+1. This project removes the `x-powered-by` response header via `next.config.js` by marking the `poweredByHeader` property as `false`.
+
+2. This project also adds support for trailing slash on URL's. So if you have a route for `/dashboard`, a request for `/dashboard/` 404's. This is definitely true for file-based URL's as documented here: https://github.com/zeit/next.js/issues/5214#issuecomment-564724632.
+
+    Picked the fix from that GitHub Issue. After applying that fix, `/dashboard/` will also redirect to `/dashboard` instead of 404ing.
+
+3. If you wish to use Enzyme instead of React Testing Library, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.

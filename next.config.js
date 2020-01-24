@@ -8,5 +8,6 @@ const ENV_VARS = {
 
 module.exports = withCSS({
   env: ENV_VARS,
-  publicRuntimeConfig: ENV_VARS
+  publicRuntimeConfig: ENV_VARS,
+  poweredByHeader: false
 })
