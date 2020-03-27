@@ -1,17 +1,18 @@
 {
+    "parser": "@typescript-eslint/parser",
     "extends": [
-        "react-app",
         "plugin:react/recommended",
         "airbnb-typescript",
-        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
         "plugin:jsx-a11y/recommended",
-        "plugin:prettier/recommended",
         "prettier/react",
-        "prettier/@typescript-eslint"
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
     ],
     "plugins": [
         "prettier",
         "@typescript-eslint",
+        "jest",
         "react"
     ],
     "env": {
@@ -72,6 +73,8 @@
         // Allows for the parsing of modern ECMAScript features
         "ecmaVersion": 2018,
         // Allows for the use of imports
-        "sourceType": "module"
+        "sourceType": "module",
+        // https://blog.geographer.fr/eslint-parser-services, https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
+        "project": "./tsconfig.json"
     }
 }

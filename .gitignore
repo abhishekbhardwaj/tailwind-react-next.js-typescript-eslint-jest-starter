@@ -9,6 +9,7 @@
 # production
 /dist
 /build
+/out
 
 #cache
 /.cache

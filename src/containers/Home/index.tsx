@@ -1,7 +1,6 @@
 import React from 'react'
-import { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home: React.FC = () => {
   const { SITE_NAME } = process.env
 
   return (

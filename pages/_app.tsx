@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import ParentApp from 'next/app'

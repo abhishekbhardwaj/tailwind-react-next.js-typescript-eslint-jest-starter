@@ -18,6 +18,8 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 - `yarn format`: To autoformat all the issues.
 - `yarn export`: Run this after running `yarn analyze` to export a build copy.
 
+- `yarn upgrade --latest`: To upgrade all packages to their latest versions (could include breaking changes).
+
 ## Code Structure
 
 1. All Next.js entrypoints are housed in the `pages/` directory as a default.
