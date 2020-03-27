@@ -17,6 +17,7 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 - `yarn lint`: To run the ESLint based linter to find out the issues in the project.
 - `yarn format`: To autoformat all the issues.
 - `yarn export`: Run this after running `yarn analyze` to export a build copy.
+- `yarn production`: To export a production build. Use `yarn start` to serve that.
 
 - `yarn upgrade --latest`: To upgrade all packages to their latest versions (could include breaking changes).
 
@@ -44,8 +45,8 @@ If you feel like changing the directory structure, please change the appropriate
 
 1. This project removes the `x-powered-by` response header via `next.config.js` by marking the `poweredByHeader` property as `false`.
 
-2. This project also adds support for trailing slash on URL's. So if you have a route for `/dashboard`, a request for `/dashboard/` 404's. This is definitely true for file-based URL's as documented here: https://github.com/zeit/next.js/issues/5214#issuecomment-564724632.
+2. This project also adds support for trailing slash on URL's. Makes `/dashboard/` redirect to `/dashboard` instead of 404ing.
 
-    Picked the fix from that GitHub Issue. After applying that fix, `/dashboard/` will also redirect to `/dashboard` instead of 404ing.
+    So if you have a route for `/dashboard`, a request for `/dashboard/` 404's. This is definitely true for file-based URL's as documented here: https://github.com/zeit/next.js/issues/5214#issuecomment-564724632. Picked the fix from that GitHub Issue.
 
-3. If you wish to use Enzyme instead of React Testing Library, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
+3. If you wish to use `Enzyme` instead of `React Testing Library`, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
