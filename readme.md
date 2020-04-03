@@ -49,4 +49,6 @@ If you feel like changing the directory structure, please change the appropriate
 
     So if you have a route for `/dashboard`, a request for `/dashboard/` 404's. This is definitely true for file-based URL's as documented here: https://github.com/zeit/next.js/issues/5214#issuecomment-564724632. Picked the fix from that GitHub Issue.
 
+    **NOTE:** Delete `pages/_error.ts` to disable this.
+
 3. If you wish to use `Enzyme` instead of `React Testing Library`, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
