@@ -52,3 +52,12 @@ If you feel like changing the directory structure, please change the appropriate
     **NOTE:** Delete `pages/_error.ts` to disable this.
 
 3. If you wish to use `Enzyme` instead of `React Testing Library`, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
+
+4. If you get a warning like this with `yarn dev`, it's okay to ignore:
+
+```
+Warning: You have added a custom /_error page without a custom /404 page. This prevents the 404 page from being auto statically optimized.
+See here for info: https://err.sh/next.js/custom-error-no-custom-404
+```
+
+this warning will go away with next.js `9.3.7`: https://github.com/zeit/next.js/issues/12127.
