@@ -14,6 +14,7 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 
 - `yarn dev`: To start a local development server.
 - `yarn test`: To run the entire unit test suite using `jest`.
+- `yarn test:ci`: To run tests on CI.
 - `yarn lint`: To run the ESLint based linter to find out the issues in the project.
 - `yarn format`: To autoformat all the issues.
 - `yarn export`: Run this after running `yarn analyze` to export a build copy.
