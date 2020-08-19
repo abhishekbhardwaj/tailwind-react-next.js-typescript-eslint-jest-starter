@@ -7,4 +7,11 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  /**
+   * Only have the one below till TailwindCSS V2.0 releases:
+   * https://tailwindcss.com/docs/upcoming-changes#remove-deprecated-gap-utilities.
+   */
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }
