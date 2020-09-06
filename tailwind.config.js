@@ -12,6 +12,7 @@ module.exports = {
    * https://tailwindcss.com/docs/upcoming-changes#remove-deprecated-gap-utilities.
    */
   future: {
+    purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
 }
