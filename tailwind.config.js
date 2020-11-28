@@ -2,17 +2,10 @@ module.exports = {
   purge: {
     content: ['./pages/**/*.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   },
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
   },
   variants: {},
   plugins: [],
-  /**
-   * Only have the one below till TailwindCSS V2.0 releases:
-   * https://tailwindcss.com/docs/upcoming-changes#remove-deprecated-gap-utilities.
-   */
-  future: {
-    purgeLayersByDefault: true,
-    removeDeprecatedGapUtilities: true,
-  },
 }

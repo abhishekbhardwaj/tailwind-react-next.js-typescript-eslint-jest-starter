@@ -24,15 +24,15 @@ Starter template for building a project using React, Typescript, Next.js, Jest, 
 
 ## Code Structure
 
-1. All Next.js entrypoints are housed in the `pages/` directory as a default.
-2. Everything else is in the `src/` directory.
+1. All source code is located in the `src/` directory.
+2. All Next.js entrypoints are housed in the `src/pages` directory as a default.
 3. `src/components` are all stateless reusable components.
 4. `src/containers` are more of stateful components for more main level components, like a whole page or screen for example.
 5. `src/css` folder is there just to house the Tailwind initialization.
 6. All env variables are available in `.env` files (`.env` file isn't committed). Whenever you update `.env`, please update `.env.example` and `.env.test` and `next.config.js` to proxy all environment variables properly.
     You can access these variables in the app source code anywhere using `process.env.<VAR_NAME>`.
 
-My personal preference is to have the bare minimum code in `pages/` and house everything in the `src/` directory. Helps keep everything in one place, neat and tidy. You can change this in any way you prefer.
+My personal preference is to have the bare minimum code in `./src/pages/` and group stateful logic components in `src/containers` directory. Helps keep everything in one place, neat and tidy. You can change this in any way you prefer.
 
 If you feel like changing the directory structure, please change the appropriate settings in the following files:
 
