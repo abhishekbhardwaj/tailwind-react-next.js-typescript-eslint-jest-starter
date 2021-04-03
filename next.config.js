@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 const ENV_VARS = {
-  SITE_NAME: process.env.SITE_NAME,
+  APP_NAME: process.env.APP_NAME,
 }
 
 module.exports = {

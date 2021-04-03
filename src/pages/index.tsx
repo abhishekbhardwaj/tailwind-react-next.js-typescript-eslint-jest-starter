@@ -3,11 +3,11 @@ import { NextPage } from 'next'
 import MainHeading from '@src/components/main-heading/main-heading'
 
 const Home: NextPage = () => {
-  const { SITE_NAME } = process.env
+  const { APP_NAME } = process.env
 
   return (
     <MainHeading>
-      Hello from <u>{SITE_NAME}</u>.
+      Hello from <u>{APP_NAME}</u>.
     </MainHeading>
   )
 }
