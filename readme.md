@@ -28,22 +28,19 @@ All source code is located in the `src/` directory.
 
 1. All Next.js entrypoints are housed in the `src/pages` directory as a default.
 
-    - Currently has `_app.tsx` which bootstraps ChakraUI within this project.
+    - Currently has `_app.tsx` which imports TailwindCSS.
     - There's also a sample `index.tsx`.
 
     **NOTE:** Feel free to move `pages` outside of `src/` if that's what you prefer. You'll just need to restart your local development server and everything should continue working as normal.
 
 2. `src/components` are all stateless reusable components.
-3. `src/containers` are more of stateful components for more main level components, like a whole page or screen for example.
-4. `src/css` folder is there just to house any CSS.
+3. `src/css` folder is there just to house any CSS.
 
     - Currently contains the TailwindCSS initialization CSS file.
 
-5. All env variables are available in `.env` files (`.env` file isn't committed). Whenever you update `.env`, please update `.env.example` and `.env.test` and `next.config.js` to proxy all environment variables properly.
+4. All env variables are available in `.env` files (`.env` file isn't committed). Whenever you update `.env`, please update `.env.example` and `.env.test` and `next.config.js` to proxy all environment variables properly.
 
     - You can access these variables in the app source code anywhere using `process.env.<VAR_NAME>`.
-
-My personal preference is to have the bare minimum code in `./src/pages/` and group stateful logic components in `src/containers` directory. Helps keep everything in one place, neat and tidy. You can change this in any way you prefer.
 
 If you feel like changing the directory structure, please change the appropriate settings in the following files:
 
