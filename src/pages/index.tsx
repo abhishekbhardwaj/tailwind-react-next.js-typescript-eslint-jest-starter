@@ -1,13 +1,14 @@
 import React from 'react'
 import { NextPage } from 'next'
+import MainHeading from '@src/components/main-heading/main-heading'
 
 const Home: NextPage = () => {
   const { SITE_NAME } = process.env
 
   return (
-    <h1 data-testid="helloH1" className="text-xl text-gray-900">
+    <MainHeading>
       Hello from <u>{SITE_NAME}</u>.
-    </h1>
+    </MainHeading>
   )
 }
 
