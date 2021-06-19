@@ -1,6 +1,7 @@
 {
     "parser": "@typescript-eslint/parser",
     "extends": [
+        "next",
         "plugin:react/recommended",
         "airbnb-typescript",
         "plugin:jsx-a11y/recommended",
