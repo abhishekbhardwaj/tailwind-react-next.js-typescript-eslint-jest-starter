@@ -3,6 +3,7 @@
     "extends": [
         "next",
         "plugin:react/recommended",
+        "airbnb",
         "airbnb-typescript",
         "plugin:jsx-a11y/recommended",
         "plugin:react-hooks/recommended",
