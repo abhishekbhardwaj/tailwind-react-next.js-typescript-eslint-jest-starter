@@ -55,3 +55,32 @@ If you feel like changing the directory structure, please change the appropriate
 1. This project removes the `x-powered-by` response header via `next.config.js` by marking the `poweredByHeader` property as `false`.
 
 2. If you wish to use `Enzyme` instead of `React Testing Library`, please refer to [this commit](https://github.com/abhishekbhardwaj/tailwind-react-next.js-typescript-eslint-jest-starter/commit/58bde782bef1050cc91a20fccecb7c6e4a6216aa). Enzyme was removed with that commit.
+
+3. If you wish to use Babel instead of SWC (introduced with the Next.js v12 upgrade), please remove the `.swcrc` file and add a `.babelrc` file at the root with the following:
+
+```
+{
+    "presets": [
+        "next/babel"
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./"
+                ],
+                "alias": {
+                    "@src": "./src"
+                },
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ]
+    ]
+}
+```
