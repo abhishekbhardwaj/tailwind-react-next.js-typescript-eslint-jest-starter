@@ -44,7 +44,7 @@ All source code is located in the `src/` directory.
 
 If you feel like changing the directory structure, please change the appropriate settings in the following files:
 
-- `.babelrc`
+- `.swcrc`
 - `jest.config.js`
 - `postcss.config.js`
 - `tsconfig.json`
