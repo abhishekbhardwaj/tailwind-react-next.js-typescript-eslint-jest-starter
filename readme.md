@@ -84,3 +84,5 @@ If you feel like changing the directory structure, please change the appropriate
     ]
 }
 ```
+
+Also, run `yarn add -D @babel/core babel-plugin-module-resolver eslint-import-resolver-babel-module` to install Babel's dependencies.

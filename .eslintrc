@@ -61,7 +61,6 @@
             ]
         },
         "import/resolver": {
-            "babel-module": {},
             "typescript": {}
         },
         "react": {

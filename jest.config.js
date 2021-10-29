@@ -8,7 +8,6 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.jest.json',
-      babelConfig: true,
       diagnostics: false,
     },
   },
