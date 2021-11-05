@@ -85,4 +85,18 @@ If you feel like changing the directory structure, please change the appropriate
 }
 ```
 
+Then, open `./jest.config.js` and find the `globals` config. Add `babelConfig: true,` to it, like so:
+
+```diff
+{
+    globals: {
+        'ts-jest': {
+            tsconfig: '<rootDir>/tsconfig.jest.json',
++           babelConfig: true,
+            diagnostics: false,
+        },
+    },
+}
+```
+
 Also, run `yarn add -D @babel/core babel-plugin-module-resolver eslint-import-resolver-babel-module` to install Babel's dependencies.
