@@ -21,6 +21,12 @@
     },
     "rules": {
         "import/prefer-default-export": "off",
+        "react/function-component-definition": [
+            1, {
+                "namedComponents":  "arrow-function",
+                "unnamedComponents":"arrow-function"
+            }
+        ],
         "react/prop-types": "off",
         "import/no-cycle": "off",
         "no-multi-assign": "off",
