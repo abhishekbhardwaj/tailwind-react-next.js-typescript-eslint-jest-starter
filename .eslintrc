@@ -6,6 +6,7 @@
         "airbnb",
         "airbnb-typescript",
         "plugin:jsx-a11y/recommended",
+        "plugin:sonarjs/recommended",
         "plugin:react-hooks/recommended",
         "plugin:prettier/recommended"
     ],
@@ -21,18 +22,19 @@
     },
     "rules": {
         "import/prefer-default-export": "off",
-        "react/function-component-definition": [
-            1, {
-                "namedComponents":  "arrow-function",
-                "unnamedComponents":"arrow-function"
-            }
-        ],
         "react/prop-types": "off",
         "import/no-cycle": "off",
         "no-multi-assign": "off",
         "import/imports-first": [
             "error",
             "absolute-first"
+        ],
+        "react/function-component-definition": [
+            1,
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
         ],
         "react/jsx-filename-extension": [
             1,
@@ -55,6 +57,34 @@
         "semi": [
             "error",
             "never"
+        ],
+        "constructor-super": "error",
+        "no-invalid-this": "error",
+        "no-restricted-syntax": [
+            "error",
+            "ForInStatement"
+        ],
+        "use-isnan": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "args": "after-used",
+                "ignoreRestSiblings": true,
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-use-before-define": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
+        "@typescript-eslint/no-unnecessary-condition": [
+            "error",
+            {
+                "allowConstantLoopConditions": true
+            }
         ]
     },
     "settings": {
