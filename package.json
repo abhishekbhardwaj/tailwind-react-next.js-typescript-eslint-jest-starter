@@ -11,12 +11,12 @@
     "test": "NODE_ENV=test jest",
     "lint": "eslint './{src,pages}/**/*' --ext .js,.jsx,.tsx,.ts",
     "format": "eslint './{src,pages}/**/*' --ext .js,.jsx,.tsx,.ts --fix",
-    "analyze": "cross-env BUNDLE_ANALYZE=both next build",
-    "export": "cross-env NODE_ENV=production next export",
-    "production": "npm-run-all analyze export",
-    "production:clean": "rimraf out/"
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf out/",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
@@ -46,8 +46,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-sonarjs": "^0.13.0",
+    "husky": "^8.0.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
+    "lint-staged": "^13.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
