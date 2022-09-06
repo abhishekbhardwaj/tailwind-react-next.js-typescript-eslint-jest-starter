@@ -21,6 +21,10 @@
     "paths": {
       "@src/*": [
         "./src/*"
+      ],
+      // Types error: https://stackoverflow.com/a/73019448
+      "react": [
+        "./node_modules/@types/react"
       ]
     },
     "incremental": true
