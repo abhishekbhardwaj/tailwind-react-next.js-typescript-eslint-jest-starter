@@ -6,6 +6,7 @@
         "airbnb",
         "airbnb-typescript",
         "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
         "plugin:sonarjs/recommended",
         "plugin:prettier/recommended"
     ],
