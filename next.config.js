@@ -4,5 +4,4 @@ module.exports = {
   generateEtags: false,
   reactStrictMode: true,
   swcMinify: true,
-  serverRuntimeConfig: {},
 }
