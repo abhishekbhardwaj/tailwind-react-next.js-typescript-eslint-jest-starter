@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index Page renders correctly 1`] = `
-<DocumentFragment>
+<div>
   <h1
     class="text-xl text-gray-900"
-    data-testid="main-heading-h1"
   />
-</DocumentFragment>
+</div>
 `;

@@ -1,15 +1,13 @@
 import React from 'react'
 import { NextPage } from 'next'
 
-import { publicRuntimeConfig } from '@src/config'
-import MainHeading from '@src/components/main-heading/main-heading'
+import MainHeading from '@/components/main-heading/main-heading'
+import { APP_NAME } from '@/config'
 
-const Home: NextPage = () => {
-  return (
-    <MainHeading>
-      Hello from <u>{publicRuntimeConfig.APP_NAME}</u>.
-    </MainHeading>
-  )
-}
+const Home: NextPage = () => (
+  <MainHeading>
+    Hello from <u>{APP_NAME}</u>.
+  </MainHeading>
+)
 
 export default Home

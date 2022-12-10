@@ -1,4 +1,5 @@
-// Loading `.env.test`: https://github.com/vercel/next.js/discussions/16270#discussioncomment-54198
-import next from 'next'
+import '@testing-library/jest-dom/extend-expect'
 
-next({})
+// Allow router mocks.
+// eslint-disable-next-line no-undef, global-require
+jest.mock('next/router', () => require('next-router-mock'))

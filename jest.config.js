@@ -1,26 +1,30 @@
-/** @type {import('ts-jest').InitialOptionsTsJest} */
-module.exports = {
-  preset: 'ts-jest/presets/js-with-ts',
-  setupFiles: ['<rootDir>/jest.setup.ts'],
-  moduleNameMapper: {
-    '^@src/(.*)$': '<rootDir>/src/$1',
-  },
-  coveragePathIgnorePatterns: ['/node_modules/'],
-  transform: {
-    // https://github.com/kulshekhar/ts-jest/blob/cefa0da660c4f99cf6595e253981af6855bcc80c/presets/index.js#L17,
-    // const { createJestPreset } = require('ts-jest')
-    // ...createJestPreset(false, true),
-    // const { jsWithTs } = require('ts-jest/presets')
-    // ...jsWithTs.transform,
-    '^.+\\.[tj]sx?$': [
-      'ts-jest',
-      {
-        tsconfig: '<rootDir>/tsconfig.jest.json',
-        diagnostics: false,
-      },
-    ],
-  },
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+})
+
+// Add any custom config to be passed to Jest
+/** @type {import('jest').Config} */
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+
+  // if using TypeScript with a baseUrl set to the root directory then you need the snippet below for alias' to work
+  moduleDirectories: ['node_modules', '<rootDir>/'],
+
+  testEnvironment: 'jest-environment-jsdom',
   testMatch: ['**/*.(test|spec).(js|jsx|ts|tsx)'],
-  testEnvironment: 'jsdom',
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  /**
+   * Absolute imports and module path aliases
+   */
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^~/(.*)$': '<rootDir>/public/$1',
+  },
 }
+
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)

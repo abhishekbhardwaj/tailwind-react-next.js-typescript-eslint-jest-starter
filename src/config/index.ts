@@ -1,5 +1,1 @@
-import getConfig from 'next/config'
-
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
-
-export { serverRuntimeConfig, publicRuntimeConfig }
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME

@@ -19,8 +19,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
+      "@/*": [
         "./src/*"
+      ],
+      "~/*": [
+        "./public/*"
       ],
       // Types error: https://stackoverflow.com/a/73019448
       "react": [

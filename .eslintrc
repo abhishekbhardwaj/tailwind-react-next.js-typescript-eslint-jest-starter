@@ -2,29 +2,28 @@
     "parser": "@typescript-eslint/parser",
     "extends": [
         "next",
-        "plugin:react/recommended",
+        "next/core-web-vitals",
         "airbnb",
         "airbnb-typescript",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react-hooks/recommended",
         "plugin:sonarjs/recommended",
-        "plugin:prettier/recommended"
+        "prettier"
     ],
     "plugins": [
         "@typescript-eslint",
         "jest",
-        "react"
+        "simple-import-sort",
+        "unused-imports"
     ],
     "env": {
-        "es6": true,
+        "es2021": true,
         "browser": true,
-        "jest": true
+        "jest": true,
+        "node": true
     },
     "rules": {
         "react/require-default-props": "off",
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
-        "import/no-cycle": "off",
         "no-multi-assign": "off",
         "import/imports-first": [
             "error",
@@ -48,6 +47,10 @@
                 ]
             }
         ],
+        // Multiline indentation: https://stackoverflow.com/a/48906878
+        "indent": ["error", 2],
+        "react/jsx-indent": ["error", 2],
+        "react/jsx-indent-props": ["error", 2],
         "quotes": [
             2,
             "single",
@@ -66,14 +69,35 @@
             "ForInStatement"
         ],
         "use-isnan": "error",
-        "@typescript-eslint/no-unused-vars": [
-            "error",
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "warn",
+        "unused-imports/no-unused-vars": [
+            "warn",
             {
-                "args": "after-used",
-                "ignoreRestSiblings": true,
                 "vars": "all",
                 "varsIgnorePattern": "^_",
+                "args": "after-used",
                 "argsIgnorePattern": "^_"
+            }
+        ],
+        "simple-import-sort/exports": "warn",
+        "simple-import-sort/imports": [
+            "warn",
+            {
+                "groups": [
+                    ["^node:"],
+                    ["^react", "^next"],
+                    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+                    // & side effect imports
+                    ["^@?\\w", "^\\u0000"],
+                    ["^.+\\.s?css$"],
+                    // Other imports
+                    ["^@/", "^~/"],
+                    // anything not matched in other groups
+                    ["^"],
+                    // relative imports - anything that starts with a dot
+                    ["^\\."]
+                ]
             }
         ],
         "@typescript-eslint/await-thenable": "error",
@@ -106,7 +130,7 @@
     },
     "parserOptions": {
         // Allows for the parsing of modern ECMAScript features
-        "ecmaVersion": 2018,
+        "ecmaVersion": 2021,
         // Allows for the use of imports
         "sourceType": "module",
         // https://blog.geographer.fr/eslint-parser-services, https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
