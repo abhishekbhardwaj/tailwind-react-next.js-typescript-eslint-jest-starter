@@ -14,15 +14,19 @@
     "test": "NODE_ENV=test jest",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf out/",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "is-ci": "^3.0.1",
     "next": "^13.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.5",
@@ -32,7 +36,10 @@
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "autoprefixer": "^10.4.13",
+    "commitizen": "^4.2.6",
     "cssnano": "^5.1.14",
+    "cz-conventional-changelog": "^3.3.0",
+    "devmoji": "^2.3.0",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
