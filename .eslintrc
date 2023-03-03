@@ -11,7 +11,6 @@
     "plugins": [
         "@typescript-eslint",
         "jest",
-        "simple-import-sort",
         "unused-imports"
     ],
     "env": {
@@ -78,26 +77,6 @@
                 "varsIgnorePattern": "^_",
                 "args": "after-used",
                 "argsIgnorePattern": "^_"
-            }
-        ],
-        "simple-import-sort/exports": "warn",
-        "simple-import-sort/imports": [
-            "warn",
-            {
-                "groups": [
-                    ["^node:"],
-                    ["^react", "^next"],
-                    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
-                    // & side effect imports
-                    ["^@?\\w", "^\\u0000"],
-                    ["^.+\\.s?css$"],
-                    // Other imports
-                    ["^@/", "^~/"],
-                    // anything not matched in other groups
-                    ["^"],
-                    // relative imports - anything that starts with a dot
-                    ["^\\."]
-                ]
             }
         ],
         "@typescript-eslint/await-thenable": "error",
